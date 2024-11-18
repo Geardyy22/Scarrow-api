@@ -49,6 +49,7 @@ app.post('/user', async (req, res) => {
         const newUser = new User(req.body); //creating user request
         await newUser.save(); //saving the user in the database
         res.status(201).json(newUser); //respond of the created user
+        res.json("Added Successfully");
 
     }catch (err) {
         console.log("I have an error", err)
